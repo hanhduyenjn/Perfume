@@ -7,13 +7,16 @@ import Newsletter from "../components/Newsletter";
 import Products from "../components/Products";
 import Slider from "../components/Slider";
 import Blankspace from "../components/Blankspace";
+import Navbar from "../components/Navbar";
+import ProductDisplay from "../components/ProductDisplay";
 
 const Home = () => {
   return (
     <div>
       <Announcement />
       <Banner />
-      <Blankspace/>
+      <Navbar />
+      <ProductDisplay/>
       <Footer/>
     </div>
   );
