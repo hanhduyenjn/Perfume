@@ -6,16 +6,14 @@ import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
 import Products from "../components/Products";
 import Slider from "../components/Slider";
+import Blankspace from "../components/Blankspace";
 
 const Home = () => {
   return (
     <div>
       <Announcement />
       <Navbar />
-      <Slider />
-      <Categories />
-      <Products/>
-      <Newsletter/>
+      <Blankspace/>
       <Footer/>
     </div>
   );

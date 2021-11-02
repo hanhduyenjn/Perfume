@@ -5,11 +5,15 @@ import styled from "styled-components";
 import { mobile } from "../responsive";
 
 const Container = styled.div`
-  height: 60px;
+  height: 180px;
   ${mobile({ height: "50px" })}
+  
 `;
-
+const Image = styled.img`
+  flex=1;
+`;
 const Wrapper = styled.div`
+  background: url(public/resource/banner.png);
   padding: 10px 20px;
   display: flex;
   align-items: center;
@@ -23,22 +27,17 @@ const Left = styled.div`
   align-items: center;
 `;
 
-const Language = styled.span`
-  font-size: 14px;
-  cursor: pointer;
-  ${mobile({ display: "none" })}
-`;
-
 const SearchContainer = styled.div`
   border: 0.5px solid lightgray;
   display: flex;
   align-items: center;
-  margin-left: 25px;
+  margin-left: 30px;
   padding: 5px;
 `;
 
 const Input = styled.input`
-  border: none;
+  border: 0.5px solid white;
+  width: 90%;
   ${mobile({ width: "50px" })}
 `;
 
@@ -60,7 +59,7 @@ const Right = styled.div`
 `;
 
 const MenuItem = styled.div`
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
   margin-left: 25px;
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
@@ -71,17 +70,22 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Left>
-          <Language>EN</Language>
-          <SearchContainer>
-            <Input placeholder="Search" />
-            <Search style={{ color: "gray", fontSize: 16 }} />
-          </SearchContainer>
+          <Logo>LAMA.</Logo>         
         </Left>
         <Center>
-          <Logo>LAMA.</Logo>
+          <SearchContainer>
+            <Input placeholder="Search" />
+            <Right>
+              <Search style={{ color: "gray", fontSize: 18 }} />
+            </Right>
+          </SearchContainer>
         </Center>
+          
+
         <Right>
-          <MenuItem>REGISTER</MenuItem>
+          <MenuItem>HOME</MenuItem>
+          <MenuItem>FAQ</MenuItem>
+          <MenuItem>CONTACT</MenuItem>
           <MenuItem>SIGN IN</MenuItem>
           <MenuItem>
             <Badge badgeContent={4} color="primary">
