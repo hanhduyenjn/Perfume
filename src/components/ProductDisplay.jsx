@@ -5,20 +5,22 @@ import {
     FormControl,
     InputLabel,
     MenuItem,
+    NativeSelect,
     Select,
     Slider,
 } from "@material-ui/core";
-import React from "react";
+import * as React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 
-export function BasicSelect() {
+const BasicSelect = () => {
     const [age, setAge] = React.useState("");
 
     const handleChange = (event) => {
         setAge(event.target.value);
     };
-}
+};
+
 const Container = styled.div`
     height: 80%;
     width: 95%;
@@ -90,18 +92,21 @@ const ProductDisplay = () => {
                 <Title>
                     Release Year:
                     <FormControl fullWidth>
-                        <InputLabel id="demo-simple-select-label"></InputLabel>
-                        <Select
-                            labelId="demo-simple-select-label"
-                            id="demo-simple-select"
-                            value={2021}
-                            label="Age"
+                        <InputLabel
+                            variant="standard"
+                            htmlFor="uncontrolled-native"
+                        ></InputLabel>
+                        <NativeSelect
+                            defaultValue={30}
+                            inputProps={{
+                                id: "uncontrolled-native",
+                            }}
                         >
-                            <MenuItem value={2021}>2021</MenuItem>
-                            <MenuItem value={2020}>2020</MenuItem>
-                            <MenuItem value={2019}>2019</MenuItem>
-                            <MenuItem value={2018}>2018</MenuItem>
-                        </Select>
+                            <option value={2021}>2021</option>
+                            <option value={2020}>2020</option>
+                            <option value={2019}>2019</option>
+                            <option value={2018}>2018</option>
+                        </NativeSelect>
                     </FormControl>
                 </Title>
             </FilterPanel>
