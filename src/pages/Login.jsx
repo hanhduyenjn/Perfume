@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 import { mobile } from '../responsive';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
 	width: 100vw;
 	height: 100vh;
 	background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
-		url('https://images.unsplash.com/photo-1595535373192-fc8935bacd89?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80')
+		url('https://images.unsplash.com/photo-1595753470961-fdb90afe0a32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')
 			center;
 	background-size: cover;
 	display: flex;
@@ -20,14 +22,14 @@ const Wrapper = styled.div`
 	background: rgba(255, 255, 255, 0);
 	backdrop-filter: blur(35px);
 	border: 3px solid rgba(255, 255, 255, 0.1);
-	box-shadow: 0 0 100px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 0 150px rgba(0, 0, 0, 0.3);
 	overflow: hidden;
 `;
 
 const Title = styled.h1`
 	font-size: 30px;
 	font-weight: 700;
-	margin-bottom: 40px;
+	margin-bottom: 10%;
 	color: white;
 	letter-spacing: 1px;
 `;
@@ -68,8 +70,8 @@ const Button = styled.button`
 	border: 0;
 	text-decoration: none;
 	border-radius: 5px;
-	background-color: rgba(255, 255, 255, 0.1);
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	background-color: rgba(255, 255, 255, 0.2);
+	border: 1px solid rgba(255, 255, 255, 0.2);
 	color: rgba(255, 255, 255, 1);
 	font-size: 16px;
 	letter-spacing: 1px;
@@ -82,15 +84,23 @@ const Button = styled.button`
 	backdrop-filter: blur(35px);
 `;
 
-const Link = styled.a`
+const RegisterLink = styled.a`
+	font-size: 14px;
+	text-decoration: none;
+	cursor: pointer;
+	color: rgba(255, 255, 255, 1);
+	font-weight: bold;
+	display: inline-block;
+	margin-top: 20px;
+`;
+const ForgotPassword = styled.a`
 	font-size: 14px;
 	text-decoration: none;
 	cursor: pointer;
 	color: rgba(255, 255, 255, 1);
 	font-weight: bold;
 	display: block;
-	margin-top: 20px;
-	display: inline-block;
+	float: right;
 `;
 const SignUpForm = styled.div`
 	width: 100%;
@@ -111,17 +121,23 @@ const Login = () => {
 				<Form>
 					<InputContainer>
 						<Label>Email address</Label>
-						<Input type="email" placeholder="Enter email" />
+						<Input
+							type="email"
+							placeholder="Enter email"
+							autoFocus
+						/>
 					</InputContainer>
 					<InputContainer>
 						<Label>Password</Label>
 						<Input type="password" placeholder="Enter password" />
-						<Link>Forgot password?</Link>
+						<ForgotPassword>Forgot password?</ForgotPassword>
 					</InputContainer>
 					<Button>Sign in</Button>
 					<SignUpForm>
 						<NormalText>Not a member? &nbsp; </NormalText>
-						<Link> Sign up now</Link>
+						<Link to="/register">
+							<RegisterLink> Sign up now</RegisterLink>
+						</Link>
 					</SignUpForm>
 				</Form>
 			</Wrapper>
