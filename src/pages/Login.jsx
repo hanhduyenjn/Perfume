@@ -15,6 +15,19 @@ const Container = styled.div`
 	justify-content: center;
 `;
 
+const Logo = styled.h1`
+	font-weight: bold;
+	text-align: center;
+	color: black;
+	text-decoration: none;
+	display: inline-block;
+	${mobile({ fontSize: '24px' })}
+`;
+const LogoContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10%;
+`;
 const Wrapper = styled.div`
 	width: 25%;
 	padding: 3%;
@@ -26,10 +39,10 @@ const Wrapper = styled.div`
 	overflow: hidden;
 `;
 
-const Title = styled.h1`
-	font-size: 30px;
+const Title = styled.h2`
+	font-size: 25px;
 	font-weight: 700;
-	margin-bottom: 10%;
+	margin-bottom: 5%;
 	color: white;
 	letter-spacing: 1px;
 `;
@@ -117,6 +130,11 @@ const Login = () => {
 	return (
 		<Container>
 			<Wrapper>
+				<LogoContainer>
+					<Link to="/">
+						<Logo>LAMA.</Logo>
+					</Link>
+				</LogoContainer>
 				<Title>SIGN IN</Title>
 				<Form>
 					<InputContainer>
