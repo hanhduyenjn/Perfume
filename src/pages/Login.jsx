@@ -7,12 +7,14 @@ const Container = styled.div`
 	width: 100vw;
 	height: 100vh;
 	background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
-		url('https://images.unsplash.com/photo-1595753470961-fdb90afe0a32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')
+		url('https://images.unsplash.com/photo-1629881604792-7313167e39f9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2069&q=80')
 			center;
 	background-size: cover;
+	background-repeat: no-repeat;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	overflow: hidden;
 `;
 
 const Logo = styled.h1`
@@ -33,7 +35,7 @@ const Wrapper = styled.div`
 	padding: 3%;
 	border-radius: 10px;
 	background: rgba(255, 255, 255, 0);
-	backdrop-filter: blur(35px);
+	backdrop-filter: blur(30px);
 	border: 3px solid rgba(255, 255, 255, 0.1);
 	box-shadow: 0 0 150px rgba(0, 0, 0, 0.3);
 	overflow: hidden;
