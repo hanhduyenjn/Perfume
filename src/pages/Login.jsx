@@ -20,7 +20,7 @@ const Container = styled.div`
 const Logo = styled.h1`
 	font-weight: bold;
 	text-align: center;
-	color: black;
+	color: white;
 	text-decoration: none;
 	display: inline-block;
 	${mobile({ fontSize: '24px' })}
