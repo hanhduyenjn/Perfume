@@ -132,7 +132,7 @@ const Login = () => {
 			<Wrapper>
 				<LogoContainer>
 					<Link to="/">
-						<Logo>LAMA.</Logo>
+						<Logo>BKPERFUME.</Logo>
 					</Link>
 				</LogoContainer>
 				<Title>SIGN IN</Title>
@@ -153,7 +153,7 @@ const Login = () => {
 					<Button>Sign in</Button>
 					<SignUpForm>
 						<NormalText>Not a member? &nbsp; </NormalText>
-						<Link to="/register">
+						<Link to="/user/register">
 							<RegisterLink> Sign up now</RegisterLink>
 						</Link>
 					</SignUpForm>

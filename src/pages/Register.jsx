@@ -154,7 +154,7 @@ const Register = () => {
 			<Wrapper>
 				<LogoContainer>
 					<Link to="/">
-						<Logo>LAMA.</Logo>
+						<Logo>BKPERFUME.</Logo>
 					</Link>
 				</LogoContainer>
 				<Title>CREATE AN ACCOUNT</Title>
@@ -219,7 +219,7 @@ const Register = () => {
 
 					<LoginForm>
 						<NormalText>Already have an account? &nbsp;</NormalText>
-						<Link to="/login">
+						<Link to="/user/login">
 							<SignInLink> Sign in</SignInLink>
 						</Link>
 					</LoginForm>
