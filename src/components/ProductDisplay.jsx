@@ -12,6 +12,7 @@ import {
 import * as React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import Products from "./Products";
 
 const BasicSelect = () => {
     const [age, setAge] = React.useState("");
@@ -52,6 +53,12 @@ const Content = styled.div`
     align-items: center;
     margin-left: 10px;
 `;
+
+const showItem = () =>{
+    return (
+        alert("Co cai lon ay dit me may")
+    );
+}
 
 const ProductDisplay = () => {
     return (
@@ -110,7 +117,9 @@ const ProductDisplay = () => {
                     </FormControl>
                 </Title>
             </FilterPanel>
-            <Display>âsasas</Display>
+            <Display>    
+            <Products></Products>
+            </Display>
         </Container>
     );
 };

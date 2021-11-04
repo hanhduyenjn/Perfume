@@ -4,6 +4,7 @@ import React from "react";
 import styled from "styled-components";
 import img from "../resource/banner.png";
 import { mobile } from "../responsive";
+import { Redirect } from "react-router";
 
 const Container = styled.div`
     height: 180px;
@@ -46,6 +47,9 @@ const Center = styled.div`
 
 const Logo = styled.h1`
     font-weight: bold;
+    cursor: pointer;
+    color: black;
+    border: 2px solid white;
     ${mobile({ fontSize: "24px" })}
 `;
 const Right = styled.div`
@@ -63,12 +67,18 @@ const MenuItem = styled.div`
     ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
+const something = () => {
+    alert("Wot the fok");
+}
+
 const Banner = () => {
     return (
         <Container>
             <Wrapper>
                 <Left>
-                    <Logo>LAMA.</Logo>
+                <Logo onClick={something}>
+                    BK Perfume
+                </Logo>
                 </Left>
                 <Center>
                     <SearchContainer>

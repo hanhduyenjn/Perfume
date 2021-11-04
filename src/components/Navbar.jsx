@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
     height: 50px;
@@ -29,6 +30,7 @@ const Navbar = () => {
     return (
         <Container>
             <Center>
+                <Link to="../pages/Cart" className="btn btn-primary">Sign up</Link>
                 <NavItem>ALL</NavItem>
                 <NavItem>FOR MEN</NavItem>
                 <NavItem>FOR WOMEN</NavItem>
