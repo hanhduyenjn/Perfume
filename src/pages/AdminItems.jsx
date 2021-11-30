@@ -130,161 +130,164 @@ const AdminItems = () => {
     };
 
     return (
-        <Container>
-            <Navbar>
-                <Title>
-                    <Link style={{ textDecoration: "none" }} to="/">
-                        <Logo>BKP.</Logo>
-                    </Link>
-                </Title>
-                <Title />
-                <StatWrapper>
-                    <Link
-                        style={{ textDecoration: "none" }}
-                        to="/admin/dashboard"
-                    >
-                        <Item>Home</Item>
-                    </Link>
-                    <Link style={{ textDecoration: "none" }} to="/">
-                        <Item>Items</Item>
-                    </Link>
+		<Container>
+			<Navbar>
+				<Title>
+					<Link style={{ textDecoration: 'none' }} to="/">
+						<Logo>BKP.</Logo>
+					</Link>
+				</Title>
+				<Title />
+				<StatWrapper>
+					<Link
+						style={{ textDecoration: 'none' }}
+						to="/admin/dashboard">
+						<Item>Home</Item>
+					</Link>
+					<Link style={{ textDecoration: 'none' }} to="/">
+						<Item>Items</Item>
+					</Link>
+					<Link
+						style={{ textDecoration: 'none' }}
+						to="/admin/dashboard/delete/items">
+						<Item>Delete Items</Item>
+					</Link>
+					<Item>Logout</Item>
+				</StatWrapper>
+			</Navbar>
+			<Menu>
+				<TitleWrapper>
+					<Title>Add Item</Title>
+					<Form onSubmit={handleSubmit}>
+						<InputContainer>
+							<Label>Product Name*</Label>
+							<Input
+								type="text"
+								placeholder="Name"
+								onChange={(e) => setName(e.target.value)}
+								required
+							/>
+						</InputContainer>
+						<InputContainer>
+							<Label>Product Brand*</Label>
+							<Input
+								type="text"
+								placeholder="Brand"
+								onChange={(e) => setBrand(e.target.value)}
+								required
+							/>
+						</InputContainer>
 
-                    <Item>Logout</Item>
-                </StatWrapper>
-            </Navbar>
-            <Menu>
-                <TitleWrapper>
-                    <Title>Add Item</Title>
-                    <Form onSubmit={handleSubmit}>
-                        <InputContainer>
-                            <Label>Product Name*</Label>
-                            <Input
-                                type="text"
-                                placeholder="Name"
-                                onChange={(e) => setName(e.target.value)}
-                                required
-                            />
-                        </InputContainer>
-                        <InputContainer>
-                            <Label>Product Brand*</Label>
-                            <Input
-                                type="text"
-                                placeholder="Brand"
-                                onChange={(e) => setBrand(e.target.value)}
-                                required
-                            />
-                        </InputContainer>
-
-                        <FlexWrapper>
-                            <InputContainer style={{ display: "flex" }}>
-                                <Wrapper>
-                                    <Label>Gender*</Label>
-                                </Wrapper>
-                                <Wrapper>
-                                    <Input
-                                        type="radio"
-                                        value="Male"
-                                        id="male"
-                                        name="gender"
-                                        onChange={(e) =>
-                                            setGender(e.target.value)
-                                        }
-                                    />
-                                    <Label for="male">Male</Label>
-                                </Wrapper>
-                                <Wrapper>
-                                    <Input
-                                        type="radio"
-                                        value="Female"
-                                        id="female"
-                                        name="gender"
-                                        onChange={(e) =>
-                                            setGender(e.target.value)
-                                        }
-                                    />
-                                    <Label for="female">Female</Label>
-                                </Wrapper>
-                                <Wrapper>
-                                    <Input
-                                        type="radio"
-                                        value="Unisex"
-                                        id="unisex"
-                                        name="gender"
-                                        onChange={(e) =>
-                                            setGender(e.target.value)
-                                        }
-                                        defaultChecked
-                                    />
-                                    <Label for="unisex">Unisex</Label>
-                                </Wrapper>
-                            </InputContainer>
-                        </FlexWrapper>
-                        <ImageFrame src={Image} />
-                        <InputContainer>
-                            <Label>Image URL</Label>
-                            <Input
-                                type="text"
-                                placeholder="URL"
-                                onChange={(e) => setImage(e.target.value)}
-                            />
-                        </InputContainer>
-                        <InputContainer style={{ display: "flex" }}>
-                            <Wrapper>
-                                <Title style={{ fontSize: 18 }}>
-                                    Option 1*
-                                </Title>
-                                <Label>Volume</Label>
-                                <Input
-                                    type="text"
-                                    placeholder="Volume in ml"
-                                    onChange={(e) => setVolume1(e.target.value)}
-                                    required
-                                />
-                                <Label>Price</Label>
-                                <Input
-                                    type="text1"
-                                    placeholder="Price in VND"
-                                    onChange={(e) => setPrice1(e.target.value)}
-                                    required
-                                />
-                            </Wrapper>
-                            <Wrapper>
-                                <Title style={{ fontSize: 18 }}>Option 2</Title>
-                                <Label>Volume</Label>
-                                <Input
-                                    type="text"
-                                    placeholder="Volume in ml"
-                                    onChange={(e) => setVolume2(e.target.value)}
-                                />
-                                <Label>Price</Label>
-                                <Input
-                                    type="text"
-                                    placeholder="Price in VND"
-                                    onChange={(e) => setPrice2(e.target.value)}
-                                />
-                            </Wrapper>
-                            <Wrapper>
-                                <Title style={{ fontSize: 18 }}>Option 3</Title>
-                                <Label>Volume</Label>
-                                <Input
-                                    type="text"
-                                    placeholder="Volume in ml"
-                                    onChange={(e) => setVolume3(e.target.value)}
-                                />
-                                <Label>Price</Label>
-                                <Input
-                                    type="text"
-                                    placeholder="Price in VND"
-                                    onChange={(e) => setPrice3(e.target.value)}
-                                />
-                            </Wrapper>
-                        </InputContainer>
-                        <Button>Submit</Button>
-                    </Form>
-                </TitleWrapper>
-            </Menu>
-        </Container>
-    );
+						<FlexWrapper>
+							<InputContainer style={{ display: 'flex' }}>
+								<Wrapper>
+									<Label>Gender*</Label>
+								</Wrapper>
+								<Wrapper>
+									<Input
+										type="radio"
+										value="Male"
+										id="male"
+										name="gender"
+										onChange={(e) =>
+											setGender(e.target.value)
+										}
+									/>
+									<Label for="male">Male</Label>
+								</Wrapper>
+								<Wrapper>
+									<Input
+										type="radio"
+										value="Female"
+										id="female"
+										name="gender"
+										onChange={(e) =>
+											setGender(e.target.value)
+										}
+									/>
+									<Label for="female">Female</Label>
+								</Wrapper>
+								<Wrapper>
+									<Input
+										type="radio"
+										value="Unisex"
+										id="unisex"
+										name="gender"
+										onChange={(e) =>
+											setGender(e.target.value)
+										}
+										defaultChecked
+									/>
+									<Label for="unisex">Unisex</Label>
+								</Wrapper>
+							</InputContainer>
+						</FlexWrapper>
+						<ImageFrame src={Image} />
+						<InputContainer>
+							<Label>Image URL</Label>
+							<Input
+								type="text"
+								placeholder="URL"
+								onChange={(e) => setImage(e.target.value)}
+							/>
+						</InputContainer>
+						<InputContainer style={{ display: 'flex' }}>
+							<Wrapper>
+								<Title style={{ fontSize: 18 }}>
+									Option 1*
+								</Title>
+								<Label>Volume</Label>
+								<Input
+									type="text"
+									placeholder="Volume in ml"
+									onChange={(e) => setVolume1(e.target.value)}
+									required
+								/>
+								<Label>Price</Label>
+								<Input
+									type="text1"
+									placeholder="Price in VND"
+									onChange={(e) => setPrice1(e.target.value)}
+									required
+								/>
+							</Wrapper>
+							<Wrapper>
+								<Title style={{ fontSize: 18 }}>Option 2</Title>
+								<Label>Volume</Label>
+								<Input
+									type="text"
+									placeholder="Volume in ml"
+									onChange={(e) => setVolume2(e.target.value)}
+								/>
+								<Label>Price</Label>
+								<Input
+									type="text"
+									placeholder="Price in VND"
+									onChange={(e) => setPrice2(e.target.value)}
+								/>
+							</Wrapper>
+							<Wrapper>
+								<Title style={{ fontSize: 18 }}>Option 3</Title>
+								<Label>Volume</Label>
+								<Input
+									type="text"
+									placeholder="Volume in ml"
+									onChange={(e) => setVolume3(e.target.value)}
+								/>
+								<Label>Price</Label>
+								<Input
+									type="text"
+									placeholder="Price in VND"
+									onChange={(e) => setPrice3(e.target.value)}
+								/>
+							</Wrapper>
+						</InputContainer>
+						<Button>Submit</Button>
+					</Form>
+				</TitleWrapper>
+			</Menu>
+		</Container>
+	);
 };
 
 export default AdminItems;
